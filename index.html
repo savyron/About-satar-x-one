@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<title>StarX1 | فروش تون، استارز و گیفت تلگرام</title>
+<title>StarX1 | معرفی ربات تون، استارز و گیفت تلگرام</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⭐%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 :root{--bg:#0a0a0a;--card:#141210;--line:#2a2418;--gold:#f5c542;--gold2:#c9971c;--tx:#f4efe2;--mu:#a89f8a;--f:"Vazirmatn",Tahoma,"Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--f);font-size:15px;line-height:1.9;overflow-x:hidden;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
-button,input,select,textarea{font-family:var(--f);font-size:inherit}
+button,input{font-family:var(--f);font-size:inherit}
 a{color:var(--gold);text-decoration:none}
 img,svg{max-width:100%}
 header{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(0,0,0,.4);display:flex;align-items:center;gap:8px;padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top,0px))}
@@ -22,47 +18,43 @@ header{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.92);backdrop-f
 @keyframes shine{to{background-position:-250% center}}
 .ib{background:var(--card);color:var(--gold);border:1px solid var(--line);border-radius:10px;min-width:42px;height:42px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:0 10px;transition:.2s}
 .ib:hover{border-color:var(--gold);transform:translateY(-1px)}
-.cnt{background:var(--gold);color:#111;border-radius:99px;font-size:11px;min-width:18px;height:18px;line-height:18px;text-align:center;font-weight:700}
-.btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:700;cursor:pointer;display:inline-block;transition:.2s ease;box-shadow:0 3px 10px rgba(245,197,66,.15)}
+.btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:0;border-radius:10px;padding:11px 22px;font-weight:700;cursor:pointer;display:inline-block;transition:.2s ease;box-shadow:0 3px 10px rgba(245,197,66,.15);position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35) 45%,transparent 60%);background-size:250% 100%;background-position:150% 0;transition:background-position .6s ease}
+.btn:hover::after{background-position:-50% 0}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,197,66,.3)}
 .btn:active{transform:translateY(0)}
-.btn.o{background:none;color:var(--gold);border:1px solid var(--gold2);box-shadow:none}.btn.o:hover{background:rgba(245,197,66,.08)}.btn.w{width:100%}
-.wrap{max-width:1050px;margin:auto;padding:0 14px}
-.hero{text-align:center;padding:44px 0 22px;position:relative}
-.hero h1{font-size:clamp(22px,6vw,42px);margin:0 0 12px;line-height:1.7;font-weight:900}
-.hero p{color:var(--mu);max-width:560px;margin:0 auto 20px}
+.btn.o{background:none;color:var(--gold);border:1px solid var(--gold2);box-shadow:none}.btn.o:hover{background:rgba(245,197,66,.08)}
+.btn.pulse{box-shadow:0 5px 18px rgba(245,197,66,.4)}
+.wrap{max-width:1000px;margin:auto;padding:0 14px}
+.hero{text-align:center;padding:50px 0 26px;position:relative}
+.hero h1{font-size:clamp(23px,6vw,42px);margin:0 0 12px;line-height:1.7;font-weight:900;text-shadow:0 0 18px rgba(245,197,66,.25)}
+.hero p{color:var(--mu);max-width:600px;margin:0 auto 22px}
 .hero .btn{margin:4px}
 .spark{position:absolute;color:var(--gold);opacity:.6;animation:twinkle 2.6s ease-in-out infinite;pointer-events:none;user-select:none;z-index:-1}
 @keyframes twinkle{0%,100%{opacity:.18;transform:scale(.8) rotate(0deg)}50%{opacity:.65;transform:scale(1.1) rotate(20deg)}}
 .topbar{position:fixed;top:0;left:0;right:0;height:2px;z-index:31;background:linear-gradient(90deg,transparent,var(--gold),#fff,var(--gold),transparent);background-size:200% auto;animation:shine 3.5s linear infinite}
-.hero h1{text-shadow:0 0 18px rgba(245,197,66,.25)}
-.cartBump{animation:cartBump .45s ease}
-@keyframes cartBump{0%{transform:scale(1)}45%{transform:scale(1.35) rotate(-6deg)}100%{transform:scale(1)}}
 .scene3d{margin:0 auto 18px;width:100px;height:100px;position:relative}
 .sphere3d{position:relative;width:88px;height:88px;margin:6px auto 0;border-radius:50%;
  background:radial-gradient(circle at 32% 26%,#fff8db,var(--gold) 38%,var(--gold2) 68%,#3a2a0c 100%);
  box-shadow:inset -10px -12px 20px rgba(0,0,0,.45),inset 6px 8px 12px rgba(255,255,255,.28),0 10px 20px rgba(0,0,0,.35),0 0 30px rgba(245,197,66,.3)}
 .orbit{position:absolute;inset:-6px;animation:spin 9s linear infinite;border:1px dashed rgba(245,197,66,.4);border-radius:50%}
 .orbitStar{position:absolute;top:-10px;left:50%;margin-left:-10px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:16px;filter:drop-shadow(0 0 6px rgba(245,197,66,.7))}
-.btn.pulse{box-shadow:0 5px 18px rgba(245,197,66,.4)}
 .hl{position:relative;display:inline-block;color:var(--gold)}
 .hl::after{content:"";position:absolute;right:0;bottom:2px;height:3px;width:100%;background:linear-gradient(90deg,var(--gold),transparent);transform-origin:right;animation:ln 2.8s ease-in-out infinite}
 @keyframes ln{0%{transform:scaleX(0)}45%,80%{transform:scaleX(1)}100%{transform:scaleX(0);transform-origin:left}}
-h2{font-size:clamp(18px,4vw,24px);margin:36px 0 14px;font-weight:900;position:relative;padding-inline-start:16px}
+h2{font-size:clamp(18px,4vw,24px);margin:40px 0 14px;font-weight:900;position:relative;padding-inline-start:16px}
 h2::before{content:"";position:absolute;right:0;top:3px;bottom:3px;width:4px;border-radius:4px;background:linear-gradient(var(--gold),var(--gold2))}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 0 10px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
-.tab{white-space:nowrap;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:7px 16px;cursor:pointer;flex:none;transition:.2s}
-.tab:hover{border-color:var(--gold2)}
-.tab.on{background:var(--gold);color:#111;font-weight:700;box-shadow:0 3px 10px rgba(245,197,66,.25)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,145px),1fr));gap:10px}
-.card{background:linear-gradient(160deg,#171410,var(--card));border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;transition:transform .15s ease,box-shadow .25s ease,border-color .25s ease;box-shadow:0 2px 10px rgba(0,0,0,.35);position:relative;overflow:hidden;will-change:transform}
+.sub{color:var(--mu);margin:-6px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:12px}
+.card{background:linear-gradient(160deg,#171410,var(--card));border:1px solid var(--line);border-radius:14px;padding:16px;text-align:right;transition:transform .15s ease,box-shadow .25s ease,border-color .25s ease;box-shadow:0 2px 10px rgba(0,0,0,.35);position:relative;overflow:hidden;will-change:transform}
 .card::after{content:"";position:absolute;top:-60%;left:-70%;width:36%;height:220%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.16),transparent);transform:rotate(18deg);transition:left .65s ease;pointer-events:none}
 .card:hover::after{left:135%}
-.card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 10px 26px rgba(245,197,66,.16)}
-.ic{font-size:42px;line-height:1.4;display:inline-block;filter:drop-shadow(0 3px 8px rgba(245,197,66,.3));transition:transform .25s ease}
-.card:hover .ic{transform:scale(1.2) rotate(8deg)}
-.nm{font-weight:700;margin:2px 0}.pr{color:var(--gold);font-size:13px;margin-bottom:8px}
-.badge{font-size:11px;background:#2a2418;color:var(--gold);border:1px solid var(--gold2);border-radius:6px;padding:1px 8px;letter-spacing:.3px}
+.card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 0 0 1px rgba(245,197,66,.5),0 12px 30px rgba(245,197,66,.28)}
+.ic{font-size:36px;line-height:1.3;display:inline-block;filter:drop-shadow(0 3px 8px rgba(245,197,66,.3));transition:transform .25s ease}
+.card:hover .ic{transform:scale(1.18) rotate(6deg)}
+.card .nm{font-weight:700;margin:8px 0 4px;font-size:16px}
+.card .ds{color:var(--mu);font-size:13.5px;line-height:1.8}
+.badge{font-size:11px;background:#2a2418;color:var(--gold);border:1px solid var(--gold2);border-radius:6px;padding:1px 8px;letter-spacing:.3px;display:inline-block;margin-top:8px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px}
 .steps .card{text-align:right}.steps .n{color:var(--gold);font-weight:900;font-size:22px}
 .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
@@ -71,42 +63,25 @@ h2::before{content:"";position:absolute;right:0;top:3px;bottom:3px;width:4px;bor
 .tr svg{width:54px;height:54px;margin-bottom:6px;filter:drop-shadow(0 0 8px rgba(245,197,66,.4));transition:.25s}
 .tr:hover svg{filter:drop-shadow(0 0 16px rgba(245,197,66,.75));transform:scale(1.08)}.tr b{display:block;color:var(--gold)}
 .tr small{color:var(--mu);display:block;margin-top:4px}
-.feat{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
-.feat span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 14px;font-size:13px;transition:.2s}
-.feat span:hover{border-color:var(--gold2);color:var(--gold)}
-.ov{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:50;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:16px 10px}
-.ov.on{display:flex}.box{background:#111;border:1px solid var(--gold2);border-radius:16px;width:100%;max-width:520px;padding:16px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
-input,textarea,select{width:100%;background:#0a0a0a;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:10px;margin:4px 0 10px;font-size:16px;transition:.2s}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
-label{font-size:13px;color:var(--mu)}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.q button{background:var(--card);color:var(--gold);border:1px solid var(--line);border-radius:6px;width:28px;height:28px;cursor:pointer;transition:.2s}
-.q button:hover{border-color:var(--gold)}
-.hid{display:none!important}
-.st{font-size:12px;border-radius:6px;padding:2px 8px;background:#2a2418;color:var(--gold)}
-/* منوی کشویی */
+.faq{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--card)}
+.faq summary{padding:14px 16px;cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:20px;transition:.25s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 16px 14px;color:var(--mu);margin:0}
+.cta{text-align:center;background:linear-gradient(160deg,#1a1608,#0f0d08);border:1px solid var(--gold2);border-radius:18px;padding:34px 18px;margin:44px 0}
+.cta h2{display:inline-block}
 #drw{position:fixed;top:0;bottom:0;right:0;width:min(78vw,300px);background:#0d0d0d;border-left:1px solid var(--gold2);z-index:70;transform:translateX(105%);transition:transform .3s ease;padding:calc(16px + env(safe-area-inset-top,0px)) 16px 16px;display:flex;flex-direction:column;gap:4px}
 #drw.on{transform:none}
 #drw a{color:var(--tx);padding:12px 10px;border-radius:10px;font-size:16px}
 #drw a:hover{background:var(--card);color:var(--gold)}
 #shade{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;opacity:0;pointer-events:none;transition:.3s}
 #shade.on{opacity:1;pointer-events:auto}
-footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 12px;text-align:center;color:var(--mu);font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 12px;text-align:center;color:var(--mu);font-size:13px}
 .savy{color:#a78bfa;font-weight:700;letter-spacing:.3px;direction:ltr;unicode-bidi:isolate}
 a.savy:hover{color:#c4b5fd;text-shadow:0 0 12px rgba(167,139,250,.5)}
-.toast{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--gold);color:#111;padding:10px 18px;border-radius:10px;z-index:99;display:none;font-weight:700;max-width:92vw;text-align:center}
-.authTabs{display:flex;gap:8px;margin-bottom:12px}
-.authTabs button{flex:1;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:9px;cursor:pointer;font-weight:700}
-.authTabs button.on{background:var(--gold);color:#111;border-color:var(--gold)}
-.capWrap{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-#capC{border-radius:10px;border:1px solid var(--line);background:#0d0c09;flex:none;cursor:pointer;touch-action:manipulation}
-.capBtn{background:var(--card);border:1px solid var(--line);color:var(--gold);border-radius:10px;width:42px;height:52px;font-size:18px;cursor:pointer;flex:none}
-.uinfo{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:10px}
-.uinfo b{color:var(--gold)}
-.errm{color:#ff6b6b;font-size:12px;margin:-6px 0 8px;display:none}
-@media(min-width:700px){.hero{padding:70px 0 30px}body{font-size:16px}}
-
-/* حلقه‌های طلایی پس‌زمینه (نسخه سبک، ثابت بدون چرخش دائمی روی موبایل) */
+.reveal{opacity:0;transform:translateY(26px)}
+.reveal.show{opacity:1;transform:translateY(0);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(60% 45% at 50% 0%,rgba(245,197,66,.10),transparent 70%),radial-gradient(50% 40% at 90% 100%,rgba(201,151,28,.10),transparent 70%)}
 .ring{position:absolute;border-radius:50%;border:2px solid rgba(245,197,66,.10);border-top-color:rgba(245,197,66,.7);border-left-color:rgba(245,197,66,.3);animation:spin 26s linear infinite;will-change:transform}
 .r1{width:min(90vw,560px);height:min(90vw,560px);top:-12%;right:-25%}
@@ -115,321 +90,104 @@ a.savy:hover{color:#c4b5fd;text-shadow:0 0 12px rgba(167,139,250,.5)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.ring{animation:none}}
 .wrap,footer{position:relative;z-index:1}
-
-/* ===== افکت‌های گرافیکی (نسخه سبک) ===== */
-.card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 0 0 1px rgba(245,197,66,.5),0 12px 30px rgba(245,197,66,.28)}
-.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35) 45%,transparent 60%);background-size:250% 100%;background-position:150% 0;transition:background-position .6s ease}
-.btn{position:relative;overflow:hidden}
-.btn:hover::after{background-position:-50% 0}
-
-/* ===== افکت‌های خفن اضافه ===== */
-.reveal{opacity:0;transform:translateY(26px)}
-.reveal.show{opacity:1;transform:translateY(0);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.grid .card{animation:cardIn .55s cubic-bezier(.2,.7,.2,1) backwards}
-@keyframes cardIn{0%{opacity:0;transform:translateY(18px) scale(.96)}100%{opacity:1;transform:translateY(0) scale(1)}}
-.coin{position:fixed;z-index:999;pointer-events:none;font-size:20px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
-.logo{cursor:pointer}
-.box{position:relative;border:1px solid var(--gold2)}
+@media(min-width:700px){.hero{padding:76px 0 32px}body{font-size:16px}}
 </style></head><body>
 <div class="topbar" aria-hidden="true"></div>
 <div class="bg" aria-hidden="true"><i class="ring r1"></i><i class="ring r3"></i><i class="ring r6"></i></div>
+
 <header>
 <button class="ib" onclick="drw(1)" aria-label="منو">☰</button>
 <div class="logo">STAR<b>X1</b> ⭐</div>
-<button class="ib" onclick="acc()" aria-label="حساب کاربری" id="accBtn">👤</button>
-<button class="ib" onclick="openCart()" aria-label="سبد" id="cartBtn">🛒<span class="cnt" id="cc">0</span></button>
+<a class="btn" href="https://t.me/StarX1_Bot" target="_blank">🤖 باز کردن ربات</a>
 </header>
 
 <div id="shade" onclick="drw(0)"></div>
 <aside id="drw">
 <div class="logo" style="margin:0 0 10px">STAR<b>X1</b> ⭐</div>
-<a href="#shop" onclick="drw(0)">🛍 فروشگاه</a>
-<a href="#how" onclick="drw(0)">📖 راهنمای خرید</a>
-<a href="#" onclick="drw(0);openT();return false">🎫 تیکت پشتیبانی</a>
-<a href="#trust" onclick="drw(0)">🛡 نمادها و اعتماد</a>
+<a href="#about" onclick="drw(0)">ℹ️ StarX1 چیست</a>
+<a href="#products" onclick="drw(0)">🛍 چی می‌فروشه</a>
+<a href="#how" onclick="drw(0)">📖 نحوه خرید</a>
+<a href="#faq" onclick="drw(0)">❓ سوالات متداول</a>
+<a href="#trust" onclick="drw(0)">🛡 امنیت و اعتماد</a>
 <a href="https://t.me/StarX1_Bot" target="_blank">🤖 ربات StarX1</a>
 <a href="https://t.me/Samyar_syfi" target="_blank">💬 پشتیبانی تلگرام</a>
-<a href="#" onclick="drw(0);acc();return false">👤 حساب کاربری</a>
-<a href="#" onclick="drw(0);adminOpen();return false">⚙️ مدیریت</a>
 </aside>
 
 <div class="wrap">
-<section class="hero" id="heroSec">
+<section class="hero">
 <span class="spark" style="top:10px;left:10px;font-size:18px">✨</span>
 <span class="spark" style="top:10px;right:10px;font-size:16px;animation-delay:.9s">✦</span>
 <div class="scene3d" aria-hidden="true"><div class="sphere3d"><div class="orbit"><span class="orbitStar">⭐</span></div></div></div>
-<h1>خرید <span class="hl">تون</span>، <span class="hl">استارز</span> و <span class="hl">گیفت</span> تلگرام</h1>
-<p>تحویل سریع، پرداخت کارت‌به‌کارت و پشتیبانی مستقیم در تلگرام. گیفت NFT فقط با ارسال لینک ثبت می‌شود.</p>
-<a class="btn pulse" href="#shop">شروع خرید</a><a class="btn o" href="https://t.me/StarX1_Bot" target="_blank">🤖 ربات StarX1</a>
+<h1>همه‌چیز درباره‌ی <span class="hl">StarX1</span></h1>
+<p>این صفحه فقط برای معرفیه — خودِ خرید، پرداخت و تحویل همیشه داخل ربات تلگرام انجام می‌شه. اینجا هیچ فروش، سبد خرید یا پرداختی وجود ندارد.</p>
+<a class="btn pulse" href="https://t.me/StarX1_Bot" target="_blank">🤖 شروع در تلگرام</a>
+<a class="btn o" href="#products">چی می‌فروشه؟</a>
 </section>
 
-<section id="shop"><div class="tabs" id="tabs"></div><div id="list"></div></section>
+<section id="about">
+<h2>StarX1 <span class="hl">چیست</span>؟</h2>
+<p class="sub">StarX1 یک ربات تلگرامی برای خرید دارایی‌ها و هدایای دیجیتال داخل تلگرام است. هیچ اپلیکیشن یا سایت جدایی برای خرید لازم نیست؛ همه‌چیز از همان چت ربات انجام می‌شود. پرداخت به‌صورت کارت‌به‌کارت است و بعد از تایید رسید، سفارش همان‌جا تحویل داده می‌شود.</p>
+</section>
 
-<section id="how"><h2>نحوه <span class="hl">خرید</span></h2>
+<section id="products">
+<h2>ربات <span class="hl">چی می‌فروشه</span>؟</h2>
+<p class="sub">شش دسته محصول، همه از طریق چت با ربات قابل سفارش‌اند.</p>
+<div class="grid">
+<div class="card reveal"><div class="ic">💎</div><div class="nm">تون (TON)</div><div class="ds">خرید توکن TON با پرداخت کارت‌به‌کارت، مقدار دلخواه.</div></div>
+<div class="card reveal" style="transition-delay:.05s"><div class="ic">⭐</div><div class="nm">استارز تلگرام</div><div class="ds">استارز (Stars) رسمی تلگرام برای هدیه، واکنش یا خرید در اپ‌ها و ربات‌ها.</div><span class="badge">محبوب</span></div>
+<div class="card reveal" style="transition-delay:.1s"><div class="ic">🎁</div><div class="nm">گیفت‌های استارزی</div><div class="ds">تدی، قلب، رز، گیفت، کیک، دسته‌گل، موشک، بطری، جام، رینگ و الماس — هدایای داخل تلگرام که با استارز ساخته می‌شوند.</div></div>
+<div class="card reveal" style="transition-delay:.15s"><div class="ic">⚡</div><div class="nm">پرمیوم تلگرام</div><div class="ds">اشتراک تلگرام پرمیوم به مدت ۱، ۳، ۶ یا ۱۲ ماهه، مستقیم برای آیدی خودتان یا هدیه به کسی دیگر.</div></div>
+<div class="card reveal" style="transition-delay:.2s"><div class="ic">🚀</div><div class="nm">بوست کانال/گروه</div><div class="ds">افزایش سطح بوست کانال یا گروه تلگرامی‌تان؛ فقط با فرستادن لینک کانال.</div></div>
+<div class="card reveal" style="transition-delay:.25s"><div class="ic">🖼</div><div class="nm">گیفت NFT</div><div class="ds">گیفت‌های NFT تلگرامی که با فرستادن لینک گیفت ثبت و پردازش می‌شوند.</div><span class="badge">با لینک</span></div>
+</div>
+</section>
+
+<section id="how">
+<h2>نحوه‌ی <span class="hl">خرید</span> از ربات</h2>
 <div class="steps">
-<div class="card reveal"><span class="n">۱</span><br><b>انتخاب</b><br><span class="pr">محصول را به سبد اضافه کنید.</span></div>
-<div class="card reveal" style="transition-delay:.08s"><span class="n">۲</span><br><b>اطلاعات</b><br><span class="pr">آیدی تلگرام را وارد کنید.</span></div>
-<div class="card reveal" style="transition-delay:.16s"><span class="n">۳</span><br><b>کارت‌به‌کارت</b><br><span class="pr">رسید را در تلگرام به @Samyar_syfi بفرستید.</span></div>
-<div class="card reveal" style="transition-delay:.24s"><span class="n">۴</span><br><b>تحویل</b><br><span class="pr">پس از تایید، سفارش تحویل می‌شود.</span></div>
-</div></section>
+<div class="card reveal"><span class="n">۱</span><br><b>باز کردن ربات</b><br><span class="ds">روی دکمه‌ی «باز کردن ربات» بزنید تا چت با @StarX1_Bot شروع شود.</span></div>
+<div class="card reveal" style="transition-delay:.08s"><span class="n">۲</span><br><b>انتخاب محصول</b><br><span class="ds">از منوی ربات دسته و مقدار مورد نظر را انتخاب کنید.</span></div>
+<div class="card reveal" style="transition-delay:.16s"><span class="n">۳</span><br><b>پرداخت کارت‌به‌کارت</b><br><span class="ds">مبلغ را به شماره کارت اعلامی واریز و رسید را همان‌جا در ربات/تلگرام بفرستید.</span></div>
+<div class="card reveal" style="transition-delay:.24s"><span class="n">۴</span><br><b>تحویل</b><br><span class="ds">بعد از تایید رسید، سفارش مستقیماً برای شما ارسال یا فعال می‌شود.</span></div>
+</div>
+</section>
 
-<section id="trust"><h2>نمادها و <span class="hl">اعتماد</span></h2>
+<section id="faq">
+<h2>سوالات <span class="hl">متداول</span></h2>
+<details class="faq"><summary>آیا خرید از اینجا (این سایت) انجام می‌شود؟</summary><p>نه. این صفحه فقط معرفی است. هر خریدی فقط از داخل ربات تلگرام @StarX1_Bot انجام می‌شود.</p></details>
+<details class="faq"><summary>پرداخت چطور است؟</summary><p>کارت‌به‌کارت. بعد از واریز، رسید را در همان چت تلگرام برای تایید ارسال می‌کنید.</p></details>
+<details class="faq"><summary>تحویل چقدر طول می‌کشد؟</summary><p>معمولاً بعد از تایید رسید، تحویل سریع انجام می‌شود؛ برای موارد خاص (مثل بوست یا NFT) ممکن است کمی زمان بررسی لازم باشد.</p></details>
+<details class="faq"><summary>برای مشکل یا سوال باید به کجا پیام بدهم؟</summary><p>پشتیبانی مستقیم در تلگرام: <a href="https://t.me/Samyar_syfi" target="_blank">@Samyar_syfi</a></p></details>
+</section>
+
+<section id="trust">
+<h2>امنیت و <span class="hl">اعتماد</span></h2>
 <div class="trust">
 <div class="tr reveal"><svg viewBox="0 0 64 64" fill="none" stroke="#f5c542" stroke-width="3"><path d="M32 5 10 14v17c0 14 9 24 22 28 13-4 22-14 22-28V14z"/><path d="m22 32 7 7 14-15"/></svg><b>نماد اعتماد الکترونیکی</b><small>اینماد</small></div>
 <div class="tr reveal" style="transition-delay:.1s"><svg viewBox="0 0 64 64" fill="none" stroke="#f5c542" stroke-width="3"><circle cx="32" cy="32" r="26"/><path d="m32 14 5 12 13 1-10 9 3 13-11-7-11 7 3-13-10-9 13-1z"/></svg><b>ساماندهی</b><small>ثبت و تایید سایت</small></div>
 </div>
-<div class="feat"><span>⚡ تحویل سریع</span><span>🔒 پرداخت امن</span><span>💬 پشتیبانی تلگرام</span><span>🤖 ربات اختصاصی</span></div>
 </section>
+
+<div class="cta reveal">
+<h2>همین حالا شروع کن</h2>
+<p class="sub">فقط یک کلیک تا باز شدن چت ربات فاصله داری.</p>
+<a class="btn pulse" href="https://t.me/StarX1_Bot" target="_blank">🤖 باز کردن @StarX1_Bot</a>
 </div>
+</div>
+
 <footer>تمامی حقوق متعلق به <a class="savy" href="https://savyron.github.io/savyron/" target="_blank" rel="noopener">Savyron Team</a> است</footer>
 
-<div class="ov" id="cartO"><div class="box">
-<div class="row"><b>🛒 سبد خرید</b><button class="btn o" onclick="cl('cartO')">✕</button></div>
-<div id="cartL"></div>
-<div class="row"><b>جمع کل</b><b class="pr" id="tot">0</b></div>
-<div id="co" class="hid">
-<label>نام</label><input id="fn">
-<label>آیدی تلگرام (مثلا @name)</label><input id="fu" dir="ltr">
-<div class="card" style="text-align:right;margin-bottom:10px">💳 کارت‌به‌کارت:<br><b dir="ltr" style="color:var(--gold)" id="cardNo"></b><br><span class="pr" id="cardNm"></span><br><span style="font-size:12px;color:var(--mu)">بعد از واریز، رسید را در تلگرام به <a href="https://t.me/Samyar_syfi" target="_blank">@Samyar_syfi</a> بفرستید.</span></div>
-<button class="btn w" onclick="order()">ثبت سفارش و ارسال رسید در تلگرام</button>
-</div>
-<button class="btn w" id="goCo" style="margin-top:8px" onclick="$('co').classList.remove('hid');this.classList.add('hid');prefillTG('fn','fu')">ادامه خرید</button>
-</div></div>
-
-<div class="ov" id="tO"><div class="box">
-<div class="row"><b>🎫 تیکت پشتیبانی</b><button class="btn o" onclick="cl('tO')">✕</button></div>
-<label>نام / آیدی تلگرام</label><input id="tn" dir="ltr">
-<label>موضوع</label><select id="ts"><option>سفارش</option><option>پرداخت</option><option>گیفت NFT</option><option>سایر</option></select>
-<label>پیام</label><textarea id="tm" rows="4"></textarea>
-<button class="btn w" onclick="sendT()">ارسال تیکت</button>
-<h3>تیکت‌های من</h3><div id="myT"></div>
-</div></div>
-
-<div class="ov" id="aO"><div class="box" style="max-width:820px">
-<div class="row"><b>⚙️ پنل مدیریت</b><button class="btn o" onclick="cl('aO')">✕</button></div>
-<div class="tabs"><button class="tab on" id="at1" onclick="aTab(1)">سفارش‌ها</button><button class="tab" id="at2" onclick="aTab(2)">تیکت‌ها</button></div>
-<div id="aL"></div>
-</div></div>
-
-<div class="ov" id="authO"><div class="box" style="max-width:400px">
-<div class="row"><b>👤 حساب کاربری</b><button class="btn o" onclick="cl('authO')">✕</button></div>
-
-<div id="uPanel" class="hid">
-<div class="uinfo">👤 خوش آمدی، <b id="uName"></b></div>
-<div class="row"><span>شماره موبایل</span><b dir="ltr" id="uPhone"></b></div>
-<button class="btn w" style="margin-top:10px" onclick="logout()">خروج از حساب</button>
-</div>
-
-<div id="aPanel">
-<div class="authTabs"><button class="on" id="tabIn" onclick="authTab('in')">ورود</button><button id="tabUp" onclick="authTab('up')">ثبت‌نام</button></div>
-
-<div id="formUp">
-<label>نام</label><input id="upName">
-<label>شماره موبایل</label><input id="upPhone" dir="ltr" inputmode="numeric" placeholder="09xxxxxxxxx">
-<label>رمز عبور</label><input id="upPass" type="password">
-<label>تکرار رمز عبور</label><input id="upPass2" type="password">
-<label>کد امنیتی تصویر را وارد کنید</label>
-<div class="capWrap"><canvas id="capC" width="150" height="52" onclick="drawCap()"></canvas><button type="button" class="capBtn" onclick="drawCap()" title="کد جدید">↻</button><input id="upCap" dir="ltr" style="margin:0" placeholder="کد را بخوانید" maxlength="6"></div>
-<div class="errm" id="upErr"></div>
-<button class="btn w" onclick="doSignup()">ثبت‌نام</button>
-</div>
-
-<div id="formIn" class="hid">
-<label>شماره موبایل</label><input id="inPhone" dir="ltr" inputmode="numeric" placeholder="09xxxxxxxxx">
-<label>رمز عبور</label><input id="inPass" type="password">
-<label>کد امنیتی تصویر را وارد کنید</label>
-<div class="capWrap"><canvas id="capC2" width="150" height="52" onclick="drawCap(2)"></canvas><button type="button" class="capBtn" onclick="drawCap(2)" title="کد جدید">↻</button><input id="inCap" dir="ltr" style="margin:0" placeholder="کد را بخوانید" maxlength="6"></div>
-<div class="errm" id="inErr"></div>
-<button class="btn w" onclick="doLogin()">ورود</button>
-</div>
-</div>
-</div></div>
-
-<div class="toast" id="toast"></div>
-
 <script>
-// ===== تنظیمات =====
-const CFG={card:"6037-0000-0000-0000",cardName:"به نام: (نام صاحب کارت)",adminPass:"starx1-admin",support:"Samyar_syfi",curr:"تومان",
- // برای اینکه سفارش‌ها و تیکت‌ها خودکار برای ادمین در تلگرام ارسال شوند، این دو مقدار را پر کنید:
- botToken:"",   // توکن ربات از @BotFather (مثل 123456:ABC-...)
- adminChatId:""}; // چت‌آیدی خودتان با ربات (راهنما در پیام کنار همین فایل)
-
-// ===== تشخیص اجرا داخل مینی‌اپ تلگرام و دریافت اطلاعات کاربر =====
-let TG_USER=null;
-(function initTG(){
- try{
-  const tw=window.Telegram&&window.Telegram.WebApp;if(!tw)return;
-  tw.ready();tw.expand();
-  const u=tw.initDataUnsafe&&tw.initDataUnsafe.user;
-  if(u){TG_USER={id:u.id,name:[u.first_name,u.last_name].filter(Boolean).join(" ")||"کاربر تلگرام",username:u.username?"@"+u.username:""}}
- }catch(e){}
-})();
-function prefillTG(nameId,idId){if(!TG_USER)return;const ne=$(nameId),ie=$(idId);
- if(ne&&!ne.value)ne.value=TG_USER.name;if(ie&&!ie.value)ie.value=TG_USER.username||String(TG_USER.id)}
-// ارسال خودکار پیام به ادمین در تلگرام (نیاز به پر بودن CFG.botToken و CFG.adminChatId دارد)
-function notifyBot(text){if(!CFG.botToken||!CFG.adminChatId)return;
- fetch(`https://api.telegram.org/bot${CFG.botToken}/sendMessage`,{method:"POST",headers:{"Content-Type":"application/json"},
-  body:JSON.stringify({chat_id:CFG.adminChatId,text,parse_mode:"HTML"})}).catch(()=>{})}
-// قیمت‌های پیش‌فرض (اگر config.json در دسترس نباشد از همین‌ها استفاده می‌شود)
-let PRICES={ton:100000,star:2500,gift:2600,premium:450000};
-function buildCats(){return{
- ton:{n:"💎 تون (TON)",items:[1,5,10,25].map(v=>({id:"ton"+v,n:"TON "+v,e:"💎",p:v*PRICES.ton}))},
- star:{n:"⭐ استارز",items:[50,100,250,500,1000].map(v=>({id:"st"+v,n:v+" استارز",e:"⭐",p:v*PRICES.star}))},
- gift:{n:"🎁 گیفت استارزی",items:[["تدی","🧸",15],["قلب","💖",15],["رز","🌹",25],["گیفت","🎁",25],["کیک","🎂",50],["دسته گل","💐",50],["موشک","🚀",50],["بطری","🍾",50],["جام","🏆",100],["رینگ","💍",100],["الماس","💎",100]].map(x=>({id:"g"+x[0],n:x[0],e:x[1],p:x[2]*PRICES.gift,s:x[2]+" ⭐"}))},
- premium:{n:"⚡ پرمیوم تلگرام",items:[1,3,6,12].map(v=>({id:"pr"+v,n:v+" ماهه",e:"⚡",p:v*PRICES.premium}))},
- nft:{n:"🖼 NFT گیفت",linkForm:{icon:"🖼",title:"ثبت سفارش گیفت NFT",desc:"لینک گیفت NFT را وارد کنید. مبلغ و جزئیات بعد از بررسی در تلگرام اعلام می‌شود.",ph:"https://t.me/nft/..."}},
- boost:{n:"🚀 بوست کانال",linkForm:{icon:"🚀",title:"ثبت سفارش بوست کانال/گروه",desc:"لینک یا آیدی کانال/گروهتان را وارد کنید تا برایش بوست فعال شود. مبلغ بعد از بررسی در تلگرام اعلام می‌شود.",ph:"https://t.me/yourchannel"}}
-}}
-let CATS=buildCats();
-function computeAll(){return Object.values(CATS).flatMap(c=>c.items||[])}
-let all=computeAll();
-let cart=JSON.parse(localStorage.getItem("sx_cart")||"{}"),cur="ton";
-const $=id=>document.getElementById(id),f=n=>n.toLocaleString("fa-IR");
-// تلاش برای خواندن قیمت‌ها و شماره‌کارت از config.json (فایل مشترک کنار سایت، قابل آپدیت توسط ربات/ادمین بدون دست‌زدن به کد)
-async function loadConfig(){
- try{
-  const r=await fetch("config.json",{cache:"no-store"});if(!r.ok)return;
-  const cfg=await r.json();
-  if(cfg.card)CFG.card=cfg.card;if(cfg.cardName)CFG.cardName=cfg.cardName;
-  if(cfg.prices){PRICES={...PRICES,...cfg.prices}}
-  CATS=buildCats();all=computeAll();renderTabs();
- }catch(e){/* اگر فایل نبود یا مشکلی بود، همون قیمت‌های پیش‌فرض بالا کار می‌کنند */}
-}
-function toast(t){const e=$("toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",2800)}
-function cl(i){$(i).classList.remove("on")}
-function drw(o){$("drw").classList.toggle("on",!!o);$("shade").classList.toggle("on",!!o)}
-function esc(s){return String(s).replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]))}
-function renderTabs(){
- $("tabs").innerHTML=Object.entries(CATS).map(([k,c])=>`<button class="tab ${k==cur?"on":""}" onclick="cur='${k}';renderTabs()">${c.n}</button>`).join("");
- const c=CATS[cur];
- $("list").innerHTML=c.linkForm?`<div class="card" style="text-align:right;max-width:520px;margin:auto"><div class="ic" style="text-align:center">${c.linkForm.icon}</div><b>${c.linkForm.title}</b><p style="color:var(--mu);margin:4px 0 10px">${c.linkForm.desc}</p>
- <label>نام</label><input id="nn"><label>آیدی تلگرام</label><input id="nu" dir="ltr" placeholder="@name"><label>لینک</label><input id="nl" dir="ltr" placeholder="${c.linkForm.ph}">
- <button class="btn w" onclick="linkOrder('${cur}')">ارسال لینک در تلگرام</button></div>`
- :`<div class="grid">`+c.items.map((i,idx)=>`<div class="card" style="animation-delay:${(idx*.04).toFixed(2)}s"><div class="ic">${i.e}</div><div class="nm">${i.n}</div>${i.s?`<span class="badge">${i.s}</span>`:""}<div class="pr">${f(i.p)} ${CFG.curr}</div><button class="btn" onclick="add('${i.id}',event)">افزودن</button></div>`).join("")+`</div>`;
- attachTilt();if(c.linkForm)prefillTG("nn","nu")}
-const CAN_HOVER=window.matchMedia&&window.matchMedia("(hover:hover) and (pointer:fine)").matches;
-function attachTilt(){if(!CAN_HOVER)return; // فقط دسکتاپ با موس؛ روی گوشی/لمسی این افکت اصلاً فعال نمی‌شود
- document.querySelectorAll("#list .card").forEach(card=>{
- card.addEventListener("mousemove",e=>{const r=card.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
-  const rx=((y/r.height)-.5)*-7,ry=((x/r.width)-.5)*7;
-  card.style.transform=`perspective(650px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`});
- card.addEventListener("mouseleave",()=>{card.style.transform=""})})}
-function save(){localStorage.setItem("sx_cart",JSON.stringify(cart));$("cc").textContent=f(Object.values(cart).reduce((a,b)=>a+b,0))}
-function add(id,ev){cart[id]=(cart[id]||0)+1;save();toast("به سبد اضافه شد ✓");
- if(ev){const card=ev.target.closest(".card"),ic=card&&card.querySelector(".ic");if(ic)flyToCart(ic)}
- const b=$("cartBtn");if(b){b.classList.remove("cartBump");void b.offsetWidth;b.classList.add("cartBump")}}
-function flyToCart(srcEl){const t=$("cartBtn");if(!srcEl||!t)return;
- const r1=srcEl.getBoundingClientRect(),r2=t.getBoundingClientRect();
- const cl=document.createElement("div");cl.textContent=srcEl.textContent;cl.className="flyIc";
- cl.style.cssText=`position:fixed;left:${r1.left}px;top:${r1.top}px;width:${r1.width}px;height:${r1.height}px;font-size:${getComputedStyle(srcEl).fontSize};line-height:${r1.height}px;text-align:center;z-index:999;pointer-events:none;transition:transform .65s cubic-bezier(.3,.85,.4,1),opacity .65s ease .15s`;
- document.body.appendChild(cl);
- requestAnimationFrame(()=>{const dx=(r2.left+r2.width/2)-(r1.left+r1.width/2),dy=(r2.top+r2.height/2)-(r1.top+r1.height/2);
-  cl.style.transform=`translate(${dx}px,${dy}px) scale(.15) rotate(340deg)`;cl.style.opacity="0.15"});
- setTimeout(()=>cl.remove(),680)}
-function burstCoins(x,y){x=x||window.innerWidth/2;y=y||window.innerHeight*.6;const n=16;
- for(let i=0;i<n;i++){const el=document.createElement("div");el.className="coin";el.textContent=Math.random()<.55?"⭐":"🪙";
-  const ang=Math.random()*Math.PI*2,dist=50+Math.random()*90,dx=Math.cos(ang)*dist,dy=Math.sin(ang)*dist-30;
-  el.style.left=x+"px";el.style.top=y+"px";el.style.transform="translate(0,0) rotate(0deg)";el.style.opacity="1";
-  el.style.transition="transform .9s cubic-bezier(.17,.89,.32,1.25), opacity .9s ease";
-  document.body.appendChild(el);
-  requestAnimationFrame(()=>{el.style.transform=`translate(${dx}px,${dy+130}px) rotate(${Math.round(Math.random()*360)}deg)`;el.style.opacity="0"});
-  setTimeout(()=>el.remove(),950)}}
-function animateNum(el,to){const from=parseInt(el.dataset.val||"0",10)||0,dur=420,t0=performance.now();
- function step(now){const p=Math.min(1,(now-t0)/dur),val=Math.round(from+(to-from)*p);el.textContent=f(val)+" "+CFG.curr;if(p<1)requestAnimationFrame(step);else el.dataset.val=to}
- requestAnimationFrame(step)}
-function chg(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];save();openCart()}
-function total(){return Object.entries(cart).reduce((s,[id,q])=>s+all.find(x=>x.id==id).p*q,0)}
-function openCart(){const ids=Object.keys(cart).filter(i=>all.find(x=>x.id==i));
- $("cartL").innerHTML=ids.length?ids.map(id=>{const i=all.find(x=>x.id==id);return `<div class="row"><span>${i.e} ${i.n}</span><span class="q"><button onclick="chg('${id}',-1)">−</button> ${f(cart[id])} <button onclick="chg('${id}',1)">+</button></span><span class="pr">${f(i.p*cart[id])}</span></div>`}).join(""):`<p style="color:var(--mu)">سبد خالی است.</p>`;
- $("tot").dataset.val=$("tot").dataset.val||"0";animateNum($("tot"),total());$("cardNo").textContent=CFG.card;$("cardNm").textContent=CFG.cardName;
- if(!ids.length)$("co").classList.add("hid");
- $("goCo").classList.toggle("hid",!ids.length||!$("co").classList.contains("hid"));$("cartO").classList.add("on")}
-
-// ===== ذخیره‌سازی در مرورگر =====
-const LS=c=>JSON.parse(localStorage.getItem("sx_"+c)||"[]");
-function put(c,o){o.at=Date.now();const l=LS(c);l.unshift(o);localStorage.setItem("sx_"+c,JSON.stringify(l))}
-function tg(msg){window.open("https://t.me/"+CFG.support+"?text="+encodeURIComponent(msg),"_blank")}
-function order(){
- const u=$("fu").value.trim(),n=$("fn").value.trim();if(!u||!n)return toast("نام و آیدی تلگرام را وارد کنید");
- const items=Object.entries(cart).map(([id,q])=>all.find(x=>x.id==id).n+" ×"+q);
- const o={id:"SX"+Date.now().toString(36).toUpperCase(),name:n,tg:u,items,total:total(),status:"در انتظار رسید"};put("orders",o);
- cart={};save();cl("cartO");$("co").classList.add("hid");
- notifyBot(`🛒 <b>سفارش جدید</b>\nشناسه: ${o.id}\nنام: ${esc(n)}\nآیدی: ${esc(u)}\n${esc(items.join("، "))}\nجمع: ${f(o.total)} ${CFG.curr}`);
- tg(`سفارش ${o.id}\nنام: ${n}\nآیدی: ${u}\n${items.join("\n")}\nجمع: ${f(o.total)} ${CFG.curr}\n(رسید پرداخت را همینجا می‌فرستم)`);toast("سفارش ثبت شد؛ رسید را در تلگرام بفرستید");burstCoins()}
-function linkOrder(key){
- const n=$("nn").value.trim(),u=$("nu").value.trim(),l=$("nl").value.trim();if(!n||!u||!l)return toast("همه فیلدها را پر کنید");
- const label=CATS[key].linkForm.title,pre=key.slice(0,2).toUpperCase();
- const o={id:pre+Date.now().toString(36).toUpperCase(),name:n,tg:u,items:[label],link:l,total:0,status:"در انتظار بررسی"};put("orders",o);
- notifyBot(`🔗 <b>${esc(label)}</b>\nشناسه: ${o.id}\nنام: ${esc(n)}\nآیدی: ${esc(u)}\nلینک: ${esc(l)}`);
- tg(`${label}\nشناسه: ${o.id}\nنام: ${n}\nآیدی: ${u}\nلینک: ${l}`);toast("ثبت شد ✓");burstCoins()}
-
-function openT(){
- $("tO").classList.add("on");const s=session();if(s)$("tn").value=s.name+" | "+s.phone;
- else if(TG_USER&&!$("tn").value)$("tn").value=TG_USER.name+" | "+(TG_USER.username||TG_USER.id);
- myT()}
-function myT(){const mine=LS("mine");$("myT").innerHTML=LS("tickets").filter(t=>mine.includes(t.id)).map(t=>`<div class="row"><span>${esc(t.subject)}: ${esc(t.msg.slice(0,40))}</span><span class="st">${esc(t.status)}</span></div>`).join("")||`<p style="color:var(--mu)">تیکتی ندارید.</p>`}
-function sendT(){const m=$("tm").value.trim(),n=$("tn").value.trim();if(!m||!n)return toast("فیلدها را پر کنید");
- const t={id:"T"+Date.now().toString(36).toUpperCase(),name:n,subject:$("ts").value,msg:m,status:"باز"};put("tickets",t);
- const mine=LS("mine");mine.push(t.id);localStorage.setItem("sx_mine",JSON.stringify(mine));$("tm").value="";toast("تیکت ثبت شد ✓");myT();
- notifyBot(`🎫 <b>تیکت جدید</b>\nشناسه: ${t.id}\nفرستنده: ${esc(n)}\nموضوع: ${esc(t.subject)}\nپیام: ${esc(m)}`);
- tg(`تیکت ${t.id} (${t.subject})\n${n}\n${m}`)}
-
-// ===== حساب کاربری + کد امنیتی =====
-let capVal={1:"",2:""};
-function drawCap(n){n=n||1;const cv=$("capC"+(n==2?"2":"")),ctx=cv.getContext("2d"),w=cv.width,h=cv.height;
- const chars="23456789ABCDEFGHJKLMNPQRSTUVWXYZ",len=5;let t="";for(let i=0;i<len;i++)t+=chars[Math.floor(Math.random()*chars.length)];
- capVal[n]=t;
- const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,"#151209");g.addColorStop(1,"#1d1810");ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
- for(let i=0;i<6;i++){ctx.strokeStyle=`rgba(245,197,66,${.12+Math.random()*.18})`;ctx.beginPath();ctx.moveTo(Math.random()*w,Math.random()*h);ctx.bezierCurveTo(Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h,Math.random()*w,Math.random()*h);ctx.lineWidth=1+Math.random();ctx.stroke()}
- for(let i=0;i<40;i++){ctx.fillStyle=`rgba(245,197,66,${.06+Math.random()*.15})`;ctx.fillRect(Math.random()*w,Math.random()*h,1,1)}
- const cw=w/(len+1);
- for(let i=0;i<len;i++){ctx.save();const cx=cw*(i+1)-6,cy=h/2+(Math.random()*10-5);ctx.translate(cx,cy);ctx.rotate((Math.random()*44-22)*Math.PI/180);
-  ctx.font=`bold ${26+Math.floor(Math.random()*8)}px Tahoma,Arial`;ctx.fillStyle=`hsl(${42+Math.random()*10},${70+Math.random()*20}%,${52+Math.random()*15}%)`;ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(t[i],0,0);ctx.restore()}
- ctx.strokeStyle="rgba(245,197,66,.25)";ctx.lineWidth=1;ctx.strokeRect(.5,.5,w-1,h-1)}
-
-function authTab(t){$("tabIn").classList.toggle("on",t=="in");$("tabUp").classList.toggle("on",t=="up");$("formIn").classList.toggle("hid",t!="in");$("formUp").classList.toggle("hid",t!="up");$("upErr").style.display="none";$("inErr").style.display="none"}
-function errShow(id,msg){const e=$(id);e.textContent=msg;e.style.display="block"}
-function validPhone(p){return /^09\d{9}$/.test(p)}
-function users(){return JSON.parse(localStorage.getItem("sx_users")||"[]")}
-function session(){return JSON.parse(localStorage.getItem("sx_session")||"null")}
-
-function doSignup(){const name=$("upName").value.trim(),phone=$("upPhone").value.trim(),p1=$("upPass").value,p2=$("upPass2").value,cap=$("upCap").value.trim();
- if(!name||!phone||!p1||!p2)return errShow("upErr","همه فیلدها را پر کنید");
- if(!validPhone(phone))return errShow("upErr","شماره موبایل معتبر نیست (مثال: 09123456789)");
- if(p1.length<4)return errShow("upErr","رمز عبور باید حداقل ۴ کاراکتر باشد");
- if(p1!==p2)return errShow("upErr","رمز عبور و تکرار آن یکسان نیست");
- if(!cap||cap.toUpperCase()!==capVal[1])return errShow("upErr","کد امنیتی درست وارد نشده، دوباره تلاش کنید"),drawCap(1);
- const us=users();if(us.some(u=>u.phone===phone))return errShow("upErr","این شماره قبلا ثبت‌نام کرده، وارد شوید"),drawCap(1);
- us.push({phone,name,pass:p1,at:Date.now()});localStorage.setItem("sx_users",JSON.stringify(us));
- localStorage.setItem("sx_session",JSON.stringify({phone,name}));
- toast("ثبت‌نام با موفقیت انجام شد ✓");accRefresh();cl("authO");burstCoins()}
-
-function doLogin(){const phone=$("inPhone").value.trim(),pass=$("inPass").value,cap=$("inCap").value.trim();
- if(!phone||!pass)return errShow("inErr","شماره و رمز عبور را وارد کنید");
- if(!cap||cap.toUpperCase()!==capVal[2])return errShow("inErr","کد امنیتی درست وارد نشده، دوباره تلاش کنید"),drawCap(2);
- const u=users().find(x=>x.phone===phone&&x.pass===pass);
- if(!u)return errShow("inErr","شماره یا رمز عبور اشتباه است"),drawCap(2);
- localStorage.setItem("sx_session",JSON.stringify({phone:u.phone,name:u.name}));
- toast("خوش آمدید "+u.name+" ✓");accRefresh();cl("authO")}
-
-function logout(){localStorage.removeItem("sx_session");accRefresh();toast("از حساب خارج شدید")}
-function accRefresh(){const s=session();$("accBtn").textContent=s?"🟢":"👤";
- $("uPanel").classList.toggle("hid",!s);$("aPanel").classList.toggle("hid",!!s);
- if(s){$("uName").textContent=s.name;$("uPhone").textContent=s.phone}}
-function acc(){$("authO").classList.add("on");accRefresh();if(!session()){drawCap(1);drawCap(2);authTab("in")}}
-
-let ok=false,tab=1;
-function adminOpen(){if(!ok){const p=prompt("رمز مدیریت:");if(p!==CFG.adminPass)return toast("رمز اشتباه");ok=true}$("aO").classList.add("on");aTab(tab)}
-function aTab(n){tab=n;$("at1").classList.toggle("on",n==1);$("at2").classList.toggle("on",n==2);
- const c=n==1?"orders":"tickets",l=LS(c);
- const sts=n==1?["در انتظار رسید","در انتظار بررسی","تایید شد","تحویل شد","لغو"]:["باز","در حال بررسی","بسته"];
- $("aL").innerHTML=l.map(o=>`<div class="card" style="text-align:right;margin-bottom:8px"><b>${esc(o.id)}</b> · ${esc(o.name)} <span dir="ltr">${esc(o.tg||"")}</span><br>${n==1?esc(o.items.join("، "))+(o.total?"<br>مبلغ: "+f(o.total):"")+(o.link?"<br><span dir='ltr'>"+esc(o.link)+"</span>":""):"<b>"+esc(o.subject)+"</b>: "+esc(o.msg)}<br>
- <select onchange="chS('${c}','${o.id}',this.value)">${sts.map(s=>`<option ${s==o.status?"selected":""}>${s}</option>`).join("")}</select></div>`).join("")||`<p style="color:var(--mu)">موردی نیست.</p>`}
-function chS(c,id,v){localStorage.setItem("sx_"+c,JSON.stringify(LS(c).map(x=>x.id==id?{...x,status:v}:x)));toast("بروز شد ✓")}
-
-// ===== افکت‌های خفن: انیمیشن ظاهر شدن با اسکرول =====
+function drw(o){document.getElementById("drw").classList.toggle("on",!!o);document.getElementById("shade").classList.toggle("on",!!o)}
 function initReveal(){if(!("IntersectionObserver"in window))return document.querySelectorAll(".reveal").forEach(el=>el.classList.add("show"));
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.15});
  document.querySelectorAll(".reveal").forEach(el=>io.observe(el))}
-renderTabs();save();accRefresh();initReveal();loadConfig();
+const CAN_HOVER=window.matchMedia&&window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+function attachTilt(){if(!CAN_HOVER)return;
+ document.querySelectorAll(".grid .card").forEach(card=>{
+  card.addEventListener("mousemove",e=>{const r=card.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+   const rx=((y/r.height)-.5)*-6,ry=((x/r.width)-.5)*6;
+   card.style.transform=`perspective(650px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`});
+  card.addEventListener("mouseleave",()=>{card.style.transform=""})})}
+initReveal();attachTilt();
 </script></body></html>
